@@ -7,4 +7,5 @@ def home(request):
 
 
 def tank1(request):
-    return render(request, '0001.html')
+    context = {}
+    return render(request, '0001.html', context=context)
