@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/static/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/JS/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +37,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\JS" />
-      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\CSS" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\templates" />
+      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\CSS" />
+      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\JS" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\JS_FILES" />
     </key>
