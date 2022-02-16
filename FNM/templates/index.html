@@ -12,27 +12,12 @@
 <body>
 <div class="header"></div>    <div class="main">
 <div class="field">
-        <a href="{% url 'tank1' %}"><div class="card">
+    {% for product in products %}
+       <div class="card"><a href="{% url 'tank1' %}">
         <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">Мега ебейший танк <div class="price">12 000 ₴</div></div>
-    </div></a>
-    <div class="card">
-        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">Мега ебейший танк <div class="price">12 000 ₴</div></div>
+        <div class="card-text">{{ product.name }} <div class="price">{{product.price}}</div></div></a>
     </div>
-    <div class="card">
-        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">Мега ебейший танк <div class="price">12 000 ₴</div></div>
-    </div>
-    <div class="card">
-        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">Мега ебейший танк <div class="price">12 000 ₴</div></div>
-    </div>
-    <div class="card">
-        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">Мега ебейший танк <div class="price">12 000 ₴</div></div>
-    </div>
-</div>
+    
 
 
 
