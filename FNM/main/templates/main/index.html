@@ -14,16 +14,12 @@
 <div class="header"></div>    <div class="main">
 <div class="field">
     {% for product in products %}
-       <div class="card"><a href="{% url 'tank1' %}">
+       <a href="{% url 'tank1' %}"><div class="card">
         <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">{{ product.name }} <div class="price">{{product.price}}</div></div></a>
+        <div class="card-text">{{ product.name }} <div class="price">{{product.price}}</div></div>
+       </div> </a>
     {% endfor %}
-    </div>
-    
-
-
-
-
+</div>
 <div class="menu">
     <div class="profile">
         <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
