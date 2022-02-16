@@ -1,6 +1,5 @@
 
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,10 +19,15 @@
        </div> </a>
     {% endfor %}
 </div>
+
+
+
+
 <div class="menu">
+    <div class="fix">
     <div class="profile">
         <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
-        <p class="sign_in"><a href=""> sign in</a> <a href="http://simpleicon.com/wp-content/uploads/basket.png" style="width: min-content;">Регистрация</a></p>
+        <p class="sign_in"><a href=""> sign in</a> <a href="" style="width: min-content;">Регистрация</a></p>
     </div>
     <div class="basket">
         <img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">
@@ -32,16 +36,9 @@
     <div class="settings">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt="">
         <p>Настройки  ▽</p>
-        <div class="settings_more">
-            <div class="theme">
-                <h3>
-                    Тема:
-                </h3>
-                <input type="radio" name="theme" id="theme" value="dark"><label for="theme">dark</label> <br>
-                <input type="radio" name="theme" id="theme" value="dark"><label for="theme">light</label>
-            </div>
-        </div>
+        
     </div>
+</div>
 </div>    </div>
 <div class="footer"></div></body>
 <script
@@ -50,3 +47,4 @@
   crossorigin="anonymous"></script>
 <script src="{% static 'JS/script.js' %}"></script>
 </html>
+

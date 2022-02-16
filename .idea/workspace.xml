@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/JS/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +41,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\css" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\main\templates\main" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\main" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\templates" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\CSS" />
-      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\JS" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
