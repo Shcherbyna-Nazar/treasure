@@ -57,7 +57,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'E:\Proga\PythonProjects\igshop\website\FNM\templates'],
+        'DIRS': [r'E:\Proga\PythonProjects\igshop\website\FNM\main\templates\main'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
