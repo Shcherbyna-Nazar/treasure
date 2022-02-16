@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def tank1(request):
+    context = {}
+    return render(request, '0001.html', context)

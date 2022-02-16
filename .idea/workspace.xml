@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="" />
+    <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/FNM/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +33,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FNM/products" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Proga\PythonProjects\igshop\website\FNM\products" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\static\css" />
       <recent name="E:\Proga\PythonProjects\igshop\website\FNM\main\templates\main" />
