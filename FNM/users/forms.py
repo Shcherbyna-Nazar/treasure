@@ -3,4 +3,6 @@ from .models import User
 
 class UserForm(ModelForm):
   class Meta:
-    pass
+    model = User
+    fields = ['username', 'email']
+    
