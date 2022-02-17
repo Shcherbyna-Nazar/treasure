@@ -4,9 +4,9 @@ from .forms import UserForm
 
 # Create your views here.
 
-def register:
+def register_user:
   pass
 
 
-def login:
+def login_user:
   pass
