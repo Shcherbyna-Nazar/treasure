@@ -11,3 +11,5 @@ class ProductModel(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     # product_owner = models.ForeignKey(User, on_delete=models.Cascade)
+    def __str__(self):
+        return f'{self.name} with price {self.price}'

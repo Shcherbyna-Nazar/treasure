@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 def home(request):
     products = ProductModel.objects.all()
     context = {'products': products}
-    return render(request, 'index.html', context)
+    return render(request, 'main/index.html', context)
 
 
 def tank1(request):
     context = {}
-    return render(request, '0001.html', context)
+    return render(request, 'main/0001.html', context)
