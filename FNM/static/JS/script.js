@@ -13,6 +13,7 @@ function resize_label(){
     width_label=parseInt($(".profile label").css("width"))+10;
     $(".profile label").css("width", width_label +'px');
     resize();
+    console.log(".!.")
 }
 function resize(){
     height_main=$(".field").css("height");
