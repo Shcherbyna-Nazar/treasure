@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% block title %}HOME{% endblock %}
@@ -7,33 +8,43 @@
 <div class="header"></div>    <div class="main">
 <div class="field">
     {% for product in products %}
-       <a href="{% url 'tank1' product.id %}"><div class="card">
-        <div class="card-movie"><img src="https://pbs.twimg.com/profile_images/1313334788577779712/Xif3J1lO_400x400.jpg" alt="Мега ебейший танк"></div>
-        <div class="card-text">{{ product.name }} <div class="price">{{product.price}}</div></div>
-       </div> </a>
+
+
+    <a href="{% url 'tank1' product.id %}"><div class="card">
+        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
+        <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
+    </div></a>
     {% endfor %}
 </div>
-
-
-
-
 <div class="menu">
     <div class="fix">
     <div class="profile">
         <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
-        <p class="sign_in"><a href=""> sign in</a> <a href="" style="width: min-content;">Регистрация</a></p>
+        <div class="theme">
+            <label><a href="">Авторизация</a></label>
+        </div>
     </div>
     <div class="basket">
         <img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">
         <p>Количество товаров в корзине:</p>
     </div>
-    <div class="settings">
+    <div class="settings" onclick="settingsMore()">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt="">
         <p>Настройки  ▽</p>
-        
+        <div class="settings_more">
+            <h3>Theme</h3>
+            <div class="theme">
+                <input type="radio" name="theme" value="dark" id="dark" onchange="change()"><label for="dark"> dark</label>
+                <input type="radio" name="theme" value="light" id="light"  onchange="change()"><label for="light">light</label>
+            </div>
+            <h3>Lang</h3>
+            <div class="theme">
+                <input type="radio" name="lang" value="rus" id="rus" onchange="change()"><label for="rus"> rus</label>
+                <input type="radio" name="lang" value="ua" id="ua"  onchange="change()"><label for="ua">ua</label>
+            </div>
+        </div>
     </div>
 </div>
-</div>
-</div>
-<div class="footer"></div></body>
+</div>    </div>
+<div class="footer"></div>
 {% endblock %}

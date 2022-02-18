@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
-      <change afterPath="$PROJECT_DIR$/FNM/products/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/static/css/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
