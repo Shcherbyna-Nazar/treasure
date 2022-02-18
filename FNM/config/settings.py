@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'products',
 ]
 
+#AUTH_USER_MODEL = 'users.User'
+
 MIDDLEWARE = [
     #'livesync.core.middleware.DjangoLiveSyncMiddleware',
     'django.middleware.security.SecurityMiddleware',
