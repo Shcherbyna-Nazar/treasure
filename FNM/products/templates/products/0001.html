@@ -1,15 +1,7 @@
-{% load static %}
+{% extends 'base.html' %}
+{% block title %}Product {{id}} {% endblock %}
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Name</title>
-<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
-<body>
+{% block content %}
     <div class="header"></div>
     <div class="main_products">
         <div class="menu">
@@ -36,10 +28,6 @@
         </div>
     </div>
     <div class="footer"></div>
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6dddef457e1677a9',m:'ApKqn.kYTRXRJszWJU0uPYccv1XzYzTQ_rO2oAtHaUs-1644921800-0-Aax99SRlM5lwl+ad7xbg6/b6L5Erjl0I2QUOQG/ifxAuvM0aVQjqo5lwJR9R4Fhbx3Q0AaFW+MPF98i96HUXbP8htwcD7IeQ9zf83AXj7zpsULXMcH2bUDbidSQQRsgkh40pyvuLdJJh0WIa+bSEGP2ZoC/3Lwujqao9c9mNDSKB8JxwTHE7Mo/KLWWl0uWlNw==',s:[0xe0ca15dd9e,0xb6bc144d55],}})();</script></body>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-<script src="{% static 'JS/script.js' %}"></script>
-</html>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6dddef457e1677a9',m:'ApKqn.kYTRXRJszWJU0uPYccv1XzYzTQ_rO2oAtHaUs-1644921800-0-Aax99SRlM5lwl+ad7xbg6/b6L5Erjl0I2QUOQG/ifxAuvM0aVQjqo5lwJR9R4Fhbx3Q0AaFW+MPF98i96HUXbP8htwcD7IeQ9zf83AXj7zpsULXMcH2bUDbidSQQRsgkh40pyvuLdJJh0WIa+bSEGP2ZoC/3Lwujqao9c9mNDSKB8JxwTHE7Mo/KLWWl0uWlNw==',s:[0xe0ca15dd9e,0xb6bc144d55],}})();</script>
+{% endblock %}

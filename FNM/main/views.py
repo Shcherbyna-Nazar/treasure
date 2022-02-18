@@ -8,7 +8,3 @@ def home(request):
     context = {'products': products}
     return render(request, 'main/index.html', context)
 
-
-def tank1(request):
-    context = {}
-    return render(request, 'main/0001.html', context)

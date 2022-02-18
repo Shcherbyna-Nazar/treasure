@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     #'livesync',
     'django.contrib.staticfiles',
     'main',
+    'products',
 ]
 
 MIDDLEWARE = [
