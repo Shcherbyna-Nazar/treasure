@@ -10,4 +10,5 @@ class ProductModel(models.Model):
     price = models.CharField(max_length=100)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+    product_photo = models.ImageField(null=True, default="")
     # product_owner = models.ForeignKey(User, on_delete=models.Cascade)
