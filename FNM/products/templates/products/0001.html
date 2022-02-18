@@ -5,11 +5,42 @@
     <div class="header"></div>
     <div class="main_products">
         <div class="menu">
+    <div class="fix">
+    <div class="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
+        <div class="theme">
+            <label><a href="{% url 'home' %}">Авторизация</a></label>
         </div>
+    </div>
+    <div class="basket">
+        <img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">
+        <p>Количество товаров в корзине:</p>
+    </div>
+    <div class="settings" onclick="settingsMore()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt="">
+        <p>Настройки  ▽</p>
+        <div class="settings_more">
+            <h3>Theme</h3>
+            <div class="theme">
+                <input type="radio" name="theme" value="dark" id="dark" onchange="change()"><label for="dark"> dark</label>
+                <input type="radio" name="theme" value="light" id="light"  onchange="change()"><label for="light">light</label>
+            </div>
+            <h3>Lang</h3>
+            <div class="theme">
+                <input type="radio" name="lang" value="rus" id="rus" onchange="change()"><label for="rus"> rus</label>
+                <input type="radio" name="lang" value="ua" id="ua"  onchange="change()"><label for="ua">ua</label>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
         <div class="field">
             <img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="">
-            <form action="" method="post"> <button type="submit" class="button-buy"> Kupit`</button></form>
-            <h1>Мега ебейший танк 12 000 ₴<h1>
+            <form action="" method="post">
+                <button type="submit" class="button-buy"> Kupit`</button>
+                {% csrf_token %}
+            </form>
+            <h1>{{product.name}}       {{product price}}<h1>
             <h3>Описание:</h3>
             <p class="description">
                 Танк сделан изидеального чугуна стрелять ядрами такими что все дома снесет и Путина в том числе пидораса этого проклятого сука пидарас блять вместе с Лукашенко ляляляляляяы
@@ -25,7 +56,7 @@
                 At atque exercitationem hic autem quis inventore rerum, in saepe nesciunt vero magni sint illo animi odio cum recusandae aliquam sapiente rem quidem enim quae error ducimus. Optio, veniam consequuntur!
                 Sit voluptatibus, sed fuga similique molestias hic voluptatem dolor, quis quos earum inventore laboriosam qui? Quaerat nulla fugiat modi fuga, magnam ducimus, minus ipsam delectus adipisci minima tempore reprehenderit. Pariatur.
             </p>
-        </div>
-    </div>
+        </div>   </div>
+
     <div class="footer"></div>
 {% endblock %}
