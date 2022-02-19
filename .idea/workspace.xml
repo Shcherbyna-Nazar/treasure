@@ -3,19 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/JS/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/FNM/products" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

@@ -11,7 +11,7 @@
 
 
     <a href="{% url 'tank1' product.id %}"><div class="card">
-        <div class="card-movie"><img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="Мега ебейший танк"></div>
+        <div class="card-movie"><img src="{{product.product_photo.url}}" alt="Мега ебейший танк" height="300" width="600"></div>
         <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
     </div></a>
     {% endfor %}
