@@ -6,7 +6,12 @@
     <h1>Hello</h1>
     <ul>
     {% for el in cart %}
-        <h1>{{el.product.name}}    {{el.price}}  {{el.quantity}}  {{el.total_price}}</h1>
+        <h2>Название: {{el.product.name}}</h2>
+        <h2>Цена за единицу: {{el.price}}</h2>
+        <h2>Количество: {{el.quantity}}</h2>
+        <h2>Всего:{{el.total_price}}</h2>
+        <h3>________________________</h3>
     {% endfor %}
     </ul>
+    <h2>Что смотришь, давай плати {{total}} долариков</h2>
 {% endblock %}

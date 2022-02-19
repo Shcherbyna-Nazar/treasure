@@ -9,9 +9,11 @@ def tank1(request, id):
         cart = Cart(request)
         cart.add(product=product)
 
+
     return render(request, 'products/0001.html', {'product': product})
 
 
 def cart_show(request):
     cart = Cart(request)
-    return render(request, 'products/cart.html', {'cart': cart})
+    total = cart.get_total_price()
+    return render(request, 'products/cart.html', {'cart': cart, 'total': total})
