@@ -14,7 +14,7 @@
     </div>
     <div class="basket">
         <img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">
-        <p>Количество товаров в корзине:</p>
+        <a href="{% url 'cart' %}">Количество товаров в корзине:</a>
     </div>
     <div class="settings" onclick="settingsMore()">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt="">
@@ -35,7 +35,7 @@
 </div>
 </div>
         <div class="field">
-            <img src="{{product.product_photo.url}}" alt="" height="300" width="600">
+            <img src="{{product.product_photo.url}}" alt="" height="300" width="300">
             <form action="" method="post">
                 <button type="submit" class="button-buy"> Kupit`</button>
                 {% csrf_token %}

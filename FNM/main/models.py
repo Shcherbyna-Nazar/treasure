@@ -10,7 +10,7 @@ class Product(models.Model):
     price = models.CharField(max_length=100)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    product_photo = models.ImageField(null=True, default="")
+    product_photo = models.ImageField(null=True, default="/images/kohala-full-size-steel-string-acoustic-guitar.jpg", upload_to='images/')
 
     # product_owner = models.ForeignKey(User, on_delete=models.Cascade)
     def __str__(self):
