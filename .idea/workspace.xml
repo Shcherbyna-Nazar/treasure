@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
