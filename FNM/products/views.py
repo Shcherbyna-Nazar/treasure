@@ -14,9 +14,9 @@ def tank1(request, id):
     return render(request, 'products/0001.html', {'product': product})
 
 
-def cart_show(request):
-    cart = Cart(request)
-    total = cart.get_total_price()
-    if not cart.session.get(settings.CART_SESSION_ID):
-        return redirect('/')
-    return render(request, 'products/cart.html', {'cart': cart, 'total': total})
+# def cart_show(request):
+#     cart = Cart(request)
+#     total = cart.get_total_price()
+#     if not cart.session.get(settings.CART_SESSION_ID):
+#         return redirect('/')
+#     return render(request, 'products/cart.html', {'cart': cart, 'total': total})
