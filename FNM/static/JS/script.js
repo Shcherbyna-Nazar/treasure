@@ -26,7 +26,8 @@ $(".menu")[0].addEventListener('mouseenter', e=>{
     $(".menu").css('width', "15%");
     $(".fix_text").css("display", "block");
     $(".fix_img").css("width", "15%");
-    $(".back").text("<<back");
+    $(".back").html('<div class="fix_text"><a href="../index.html"><< Назад</a></div>');
+    $(".back .fix_text").css("display", "block");
     $(".back").css("text-align", "center");
     resize();
 })
@@ -42,7 +43,7 @@ $(".menu")[0].addEventListener('mouseleave', e=>{
     $(".menu").css('width', "5%");
     $(".fix_text").css("display", "none");
     $(".fix_img").css("width", "50%");
-    $(".back").text("<<");
+    $(".back").html('<a href="../index.html"><div class="fix_text"><<</div></a>');
     $(".back").css("text-align", "left");
     resize();
 })
