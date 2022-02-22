@@ -196,15 +196,18 @@ a {
 }
 
 .back {
-  font-size: 24pt;
-  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.back .fix_text {
+  display: block;
 }
 
-.back_a {
+.back a {
   text-decoration: none;
   color: #000;
 }
-.back_a div:hover {
+.back a div:hover {
   background-color: rgba(255, 255, 255, 0.459);
 }
 
