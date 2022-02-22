@@ -15,49 +15,99 @@ body {
 
 .fix {
   width: 100%;
-}
-.fix .settings_more {
-  margin-top: 5px;
-  display: none;
-}
-.fix .theme {
-  width: 75%;
-  margin-left: 10px;
-}
-.fix .profile_more {
-  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.fix div {
-  width: 100%;
-  margin: auto;
-  margin-top: 20px;
+
+.fix_item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 5px;
   height: 50px;
-  padding-top: 10px;
+  margin-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
-.fix div img {
-  width: 50%;
-  float: left;
+.fix_item:hover {
+  background: white;
+  opacity: 0.9;
 }
-.fix div p {
-  display: block;
-  cursor: default;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #301111;
-  font-size: 100%;
+
+.more {
   display: none;
-  margin-top: 5px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
-.fix div a {
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-  background-color: black;
+.more:hover {
+  background: none;
 }
-.fix > div:hover {
-  background-color: #fff;
+
+.fix_img {
+  width: 50%;
+}
+.fix_img img {
+  width: 100%;
+}
+
+.fix_text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 5px;
+  text-align: center;
+  width: 60%;
+  display: none;
+  font-size: 22px;
+}
+
+.fix_item > table {
+  margin: auto;
+  table-layout: fixed;
+  background: white;
+  width: 100%;
+  border: 1px black solid;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.fix_item > table tr {
+  border: 1px black solid;
+}
+.fix_item > table tr:first-child {
+  font-weight: bold;
+}
+.fix_item > table td:last-child {
+  text-align: center;
+  border: 1px black solid;
+  width: 25%;
+}
+.fix_item > table td:nth-child(2) {
+  width: 25%;
+  text-align: right;
+  margin-right: 5px;
+}
+.fix_item > table td img {
+  width: 20%;
+}
+.fix_item > table td {
+  overflow: hidden;
 }
 
 .menu {
@@ -65,47 +115,6 @@ body {
   height: 100%;
   float: left;
   background: #89aac0;
-}
-
-h3 {
-  font-size: 25px;
-  margin: 5px;
-}
-
-.theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.theme input {
-  text-decoration: none;
-  display: none;
-}
-.theme label {
-  font-size: 20px;
-  display: block;
-  height: 25px;
-  border-radius: 5px;
-  width: 50px;
-  text-align: center;
-}
-
-label {
-  background: #000;
-  color: white;
-}
-label:hover {
-  border: 2px white solid;
-}
-
-label[for=light] {
-  color: #000;
-  background-color: white;
-}
-label[for=light]:hover {
-  border: 2px black solid;
 }
 
 .field {
@@ -173,45 +182,43 @@ a {
   display: block;
   padding: 20px;
 }
-.main_products img {
+.main_products .field img {
   float: left;
   margin-right: 20px;
 }
-.main_products h1 {
+.main_products .field h1 {
   font-size: 32pt;
   color: black;
 }
-.main_products .button {
+.main_products .field .button {
   background-color: green;
   width: 150px;
   font-size: 25pt;
   float: right;
   margin: 30px;
 }
-.main_products .back {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: block;
-  margin: auto;
+
+.back {
+  font-size: 24pt;
+  font-weight: bold;
 }
 
-.profile label {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.back_a {
+  text-decoration: none;
+  color: #000;
+}
+.back_a div:hover {
+  background-color: rgba(255, 255, 255, 0.459);
+}
+
+.up {
   display: none;
+  width: 5%;
+  height: 50px;
   text-align: center;
+  font-size: 28pt;
+  bottom: 0px;
 }
-.profile label:hover {
-  border: 2px grey solid;
-}
-
-.profile .theme {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 0px;
-  margin-left: 5px;
-  padding: 0px;
+.up:hover {
+  background: white;
 }
