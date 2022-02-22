@@ -82,7 +82,7 @@ body {
   margin: auto;
   table-layout: fixed;
   background: white;
-  width: 100%;
+  width: 90%;
   border: 1px black solid;
   border-collapse: collapse;
   font-size: 20px;
@@ -105,9 +105,6 @@ body {
 }
 .fix_item > table td img {
   width: 20%;
-}
-.fix_item > table td {
-  overflow: hidden;
 }
 
 .menu {
@@ -221,4 +218,43 @@ a {
 }
 .up:hover {
   background: white;
+}
+
+.field table {
+  margin-top: 20px;
+  font-size: 30px;
+  border: 1px black solid;
+  width: 80%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.field table tr, .field table td {
+  border: 1px black solid;
+}
+.field table tr {
+  border: 1px black solid;
+}
+.field table tr:first-child {
+  font-weight: bold;
+}
+.field table td:last-child {
+  text-align: center;
+  border: 1px black solid;
+  width: 25%;
+}
+.field table td:nth-child(2) {
+  width: 25%;
+  text-align: right;
+  margin-right: 5px;
+}
+.field table td img {
+  width: 15%;
+}
+.field table tr:last-child td:first-child {
+  font-weight: bold;
+}
+
+.price_one {
+  font-style: italic;
+  font-size: 20px;
 }
