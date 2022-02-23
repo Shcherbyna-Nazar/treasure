@@ -1,65 +1,62 @@
 {% extends 'base.html' %}
 {% block title %}Product {{product.id}}{% endblock %}
-
 {% block content %}
     <div class="header"></div>
     <div class="main_products">
         <div class="menu">
             <div class="fix">
                 <div class="fix_item back">
-                    <div class="fix_text"><a href="{% url 'home' %}">Назад <<</a></div>
+                    <div class="fix_text back_text"><a href="{% url 'home' %}"><<</a></div>
                 </div>
-            <div class="fix_item">
-                <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
-                <div class="fix_text"><a href="">Авторизация</a></div>
+                <div class="fix_item">
+                    <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
+                    <div class="fix_text"><a href="">Авторизация</a></div>
+                </div>
+                <div class="fix_item" id="basket">
+                    <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
+                    <div class="fix_text">Корзина </div>
+                </div>
+                <div class="fix_item more">
+                    <table>
+                        <tr>
+                            <td>товар</td>
+                            <td>к-во</td>
+                            <td>цена</td>
+                        </tr>
+                        {% for el in cart %}
+                        <tr>
+                            <td><a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a></td>
+                            <td>x{{el.quantity}}</td>
+                            <td>{{el.total_price}}</td>
+                        </tr>
+                        {%endfor%}
+                        <tr>
+                            <td colspan="2">Общая стоимость</td>
+                            <td>{{total}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fix_item">
+                    <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
+                    <div class="fix_text">Настройки </div>
+                </div>
+                <div class="up" onclick="goToUp()">&#8657;</div>
             </div>
-            <div class="fix_item" id="basket">
-                <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
-                <div class="fix_text">Корзина ▽</div>
-            </div>
-            <div class="fix_item more">
-                <table>
-                    <tr>
-                        <td>товар</td>
-                        <td>к-во</td>
-                        <td>цена</td>
-                    </tr>
-                    {% for el in cart %}
-                    <tr>
-                        <td><a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a></td>
-                        <td>x{{el.quantity}}</td>
-                        <td>{{el.total_price}}</td>
-                    </tr>
-                    {%endfor%}
-                    <tr>
-                        <td colspan="2">Общая стоимость</td>
-                        <td>{{total}}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="fix_item">
-                <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
-                <div class="fix_text">Настройки  ▽</div>
-            </div>
-        </div>
-            <div class="up" onclick="goToUp()">&#8657;</div>
         </div>
         <div class="field">
-            <img src="{{product.product_photo.url}}" alt="" height="300" width="300">
-            <form action="" method="post">
-                <button type="submit" class="button-buy"> Kupit`</button>
-                {% csrf_token %}
+            <img src="{{product.product_photo.url}}" width="300" height="300" alt="">
+            <form action="" method="post"> <button type="submit" class="button-buy"> Kupit`</button> {% csrf_token %}</form>
+            <h1>{{product.name}}</h1>
 
-            </form>
-            <h1>{{product.name}}    {{product.price}}$</h1>
             <h3>Описание:</h3>
             <p class="description">
-                {{product.description}}
+               {{product.description}}
             </p>
-        </div>   </div>
-
+        </div>
+        <div class="up" onclick="goToUp()">&#8657;&#8657;&#8657;</div>
+    </div>
     <div class="footer"></div>
 {% endblock %}

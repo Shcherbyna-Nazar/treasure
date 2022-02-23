@@ -5,28 +5,35 @@
 {% block content %}
 <div class="header"></div>    <div class="main">
     <div class="field">
-        <table>
-            <tr>
-                <td>Товар</td>
-                <td>Количество</td>
-                <td>Цена</td>
-            </tr>
-            {% for el in cart %}
-            <tr>
-                <td>
-                    <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
-                    <a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a> <br>
-                    <span class="price_one"> Цена за 1 единицу:{{el.price}}  </span>
-                </td>
-                <td>x{{el.quantity}}</td>
-                <td>{{el.total_price}}</td>
-            </tr>
-            {%endfor%}
-            <tr>
-                <td colspan="2">Общая стоимость</td>
-                <td>{{total}}</td>
-            </tr>
-        </table>
+        <div class="table_zone">
+            <table>
+                <tr>
+                    <td>товар</td>
+                    <td>к-во</td>
+                    <td>цена</td>
+                </tr>
+                {% for el in cart %}
+                <tr>
+                    <td>
+                        <button class="del">Удалить с корзины</button>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
+                        <a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a> <br>
+                        <span class="price_one"> Цена за 1 единицу:{{el.price}}  </span>
+                        </td>
+                    <td>x{{el.quantity}}</td>
+                    <td>{{el.total_price}}</td>
+                </tr>
+                {%endfor%}
+                <tr>
+                    <td colspan="2">Общая стоимость</td>
+                    <td>{{total}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="navigation_cart">
+            <button class="confirm">Оформить заказ</button>
+            <button class="clear">Очистить корзину</button>
+        </div>
     </div>
 <div class="menu">
 <div class="fix">

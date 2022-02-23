@@ -169,7 +169,7 @@ a {
 .button-buy {
   background-color: green;
   width: 150px;
-  font-size: 25pt;
+  font-size: 25px;
   float: right;
   margin: 30px;
 }
@@ -224,6 +224,7 @@ a {
 }
 
 .field table {
+  margin: auto;
   margin-top: 20px;
   font-size: 30px;
   border: 1px black solid;
@@ -260,4 +261,24 @@ a {
 .price_one {
   font-style: italic;
   font-size: 20px;
+}
+
+.table_zone {
+  width: 100%;
+}
+
+.navigation_cart {
+  margin-left: 65%;
+  margin-top: 20px;
+}
+.navigation_cart button {
+  font-size: 20px;
+  cursor: pointer;
+}
+.navigation_cart button:last-child {
+  margin-left: 20px;
+}
+
+.del {
+  float: right;
 }
