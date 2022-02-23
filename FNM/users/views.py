@@ -21,7 +21,7 @@ def register_user:
   return render(request, "login_register.html", context)
 
 def login_user:
-  form = UserLoginForm
+  page = 'login'
   if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -35,6 +35,6 @@ def login_user:
             return redirect('home')
         else:
             messages.error(request, 'SUCK SOME COCK U STUPID BITCH!!!')
-  context = {'form': form}
+  context = {'page': page}
   return render(request, "login_register.html", context)
 
