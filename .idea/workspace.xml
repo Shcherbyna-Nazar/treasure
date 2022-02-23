@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
+      <change afterPath="$PROJECT_DIR$/FNM/products/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/JS/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNM/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>

@@ -48,7 +48,11 @@
         </div>
         <div class="field">
             <img src="{{product.product_photo.url}}" width="300" height="300" alt="">
-            <form action="" method="post"> <button type="submit" class="button-buy"> Kupit`</button> {% csrf_token %}</form>
+            <form action="" method="post">
+                {{form}}
+                <button type="submit" class="button-buy"> Kupit`</button>
+                {% csrf_token %}
+            </form>
             <h1>{{product.name}}</h1>
 
             <h3>Описание:</h3>
