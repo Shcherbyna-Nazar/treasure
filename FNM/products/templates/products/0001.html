@@ -1,65 +1,85 @@
-{% extends 'base.html' %}
-{% block title %}Product {{product.id}}{% endblock %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Name</title>
+</head>
+<body>
     <div class="header"></div>
     <div class="main_products">
         <div class="menu">
             <div class="fix">
                 <div class="fix_item back">
-                    <div class="fix_text"><a href="{% url 'home' %}"><<</a></div>
+                    <div class="fix_text back_text"><a href="../index.html"><<</a></div>
                 </div>
-            <div class="fix_item">
-                <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
-                <div class="fix_text"><a href="">Авторизация</a></div>
-            </div>
-            <div class="fix_item" id="basket">
-                <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
-                <div class="fix_text">Корзина ▽</div>
-            </div>
-            <div class="fix_item more">
-                <table>
-                    <tr>
-                        <td>товар</td>
-                        <td>к-во</td>
-                        <td>цена</td>
-                    </tr>
-                    {% for el in cart %}
-                    <tr>
-                        <td>{{el.product.name}}</td>
-                        <td>x{{el.quantity}}</td>
-                        <td>{{el.total_price}}</td>
-                    </tr>
-                    {%endfor%}
-                    <tr>
-                        <td colspan="2">Общая стоимость</td>
-                        <td>{{total}}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="fix_item">
-                <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
-                <div class="fix_text">Настройки  ▽</div>
+                <div class="fix_item">
+                    <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
+                    <div class="fix_text"><a href="">Авторизация</a></div>
+                </div>
+                <div class="fix_item" id="basket">
+                    <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
+                    <div class="fix_text">Корзина </div>
+                </div>
+                <div class="fix_item more">
+                    <table>
+                        <tr>
+                            <td>товар</td>
+                            <td>к-во</td>
+                            <td>цена</td>
+                        </tr>
+                        {% for el in cart %}
+                        <tr>
+                            <td>{{el.product.name}}</td>
+                            <td>x{{el.quantity}}</td>
+                            <td>{{el.total_price}}</td>
+                        </tr>
+                        {%endfor%}
+                        <tr>
+                            <td colspan="2">Общая стоимость</td>
+                            <td>{{total}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><a href="products\cart.html"> Перейти в корзину</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fix_item">
+                    <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
+                    <div class="fix_text">Настройки </div>
+                </div>
+                <div class="up" onclick="goToUp()">&#8657;</div>
             </div>
         </div>
-            <div class="up" onclick="goToUp()">&#8657;</div>
-        </div>
-    </div>
         <div class="field">
-            <img src="{{product.product_photo.url}}" alt="" height="300" width="300">
-            <form action="" method="post">
-                <button type="submit" class="button-buy"> Kupit`</button>
-                {% csrf_token %}
-            </form>
-            <h1>{{product.name}}    {{product.price}}$<h1>
+            <img src="https://vooosoo.ru/wp-content/uploads/2020/05/RFHNBYJXRF.jpg" alt="">
+            <form action="" method="post"> <button type="submit" class="button-buy"> Kupit`</button></form>
+            <h1>Мега ебейший танк 12 000 ₴<h1>
             <h3>Описание:</h3>
             <p class="description">
-                {{product.description}}
+                Танк сделан изидеального чугуна стрелять ядрами такими что все дома снесет и Путина в том числе пидораса этого проклятого сука пидарас блять вместе с Лукашенко ляляляляляяы
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi doloribus autem officiis ex tempora magnam, harum fugit nostrum atque molestias. Ut laudantium a eaque voluptatibus quod enim accusamus debitis voluptas.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora sit ut earum a rem error amet, illo, perspiciatis, perferendis dolore assumenda fuga accusamus aut harum delectus quo. Laudantium, sed eligendi.
+                In, quasi quo, accusantium tenetur, neque fugiat deleniti dolores labore hic praesentium et vitae odio ea recusandae voluptatum? Id molestias perspiciatis dolores labore reprehenderit enim numquam ad doloribus veniam architecto!
+                Assumenda tempora rem iure id sapiente eum ipsam harum enim quisquam in, minima facere illum unde quas ducimus nisi similique iste dolorem voluptatem distinctio reiciendis tempore dolor. Laudantium, iusto magnam.
+                Perferendis voluptatem aperiam odit reprehenderit consequatur similique dicta, cum, laboriosam nemo aut maxime dolorum asperiores illo, corrupti quia quod? Fugit, eaque qui nesciunt ducimus quo in doloremque. Ex, excepturi corporis?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur doloremque natus ab quasi consectetur nobis placeat laboriosam, vero illum deleniti odit in nisi eius alias adipisci velit et nesciunt incidunt.
+                Iste eaque voluptas exercitationem! Ipsum magnam dicta ex dolorem illo optio animi quis, eveniet vel. Iste possimus sed tenetur corrupti labore dolore, consequuntur in consequatur magnam voluptates eveniet sequi deserunt?
+                Asperiores, facilis dolor dolore quo eaque voluptate quidem mollitia ex sunt molestiae nobis voluptates corrupti sint perspiciatis maiores possimus accusamus at laudantium est inventore nisi dignissimos dolorem incidunt! Cum, suscipit!
+                Similique nobis nemo eveniet. Dolor culpa minima quis unde, itaque repudiandae saepe assumenda optio voluptatibus, voluptas, officia praesentium quaerat harum perferendis maxime inventore? Dolorem optio quaerat deserunt! Commodi, numquam similique?
+                At atque exercitationem hic autem quis inventore rerum, in saepe nesciunt vero magni sint illo animi odio cum recusandae aliquam sapiente rem quidem enim quae error ducimus. Optio, veniam consequuntur!
+                Sit voluptatibus, sed fuga similique molestias hic voluptatem dolor, quis quos earum inventore laboriosam qui? Quaerat nulla fugiat modi fuga, magnam ducimus, minus ipsam delectus adipisci minima tempore reprehenderit. Pariatur.
             </p>
-        </div>   </div>
-
+        </div>
+        <div class="up" onclick="goToUp()">&#8657;&#8657;&#8657;</div>
+    </div>
     <div class="footer"></div>
-{% endblock %}
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="../script.js"></script>
+</html>
