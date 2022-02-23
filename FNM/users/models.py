@@ -4,4 +4,5 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
-  pass
+  ig_username = CharField(max_lenght=100)
+  
