@@ -15,7 +15,7 @@
             <tr>
                 <td>
                     <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
-                    {{el.product.name}} <br>
+                    <a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a> <br>
                     <span class="price_one"> Цена за 1 единицу:{{el.price}}  </span>
                 </td>
                 <td>x{{el.quantity}}</td>

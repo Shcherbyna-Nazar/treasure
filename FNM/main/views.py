@@ -9,8 +9,6 @@ from django.contrib.auth.models import User
 def home(request):
     cart = Cart(request)
     total = cart.get_total_price()
-    if not cart.session.get(settings.CART_SESSION_ID):
-        return redirect('/')
 
     products = Product.objects.all()
     context = {'products': products, 'cart': cart, 'total': total}

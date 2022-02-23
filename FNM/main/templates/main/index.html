@@ -34,11 +34,18 @@
             </tr>
             {% for el in cart %}
             <tr>
-                <td><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">{{el.product.name}}</td>
+                <td><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"> <a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a></td>
                 <td>x{{el.quantity}}</td>
                 <td>{{el.total_price}}</td>
             </tr>
             {%endfor%}
+             <tr>
+                <td colspan="2">Общая стоимость</td>
+                <td>{{total}}</td>
+             </tr>
+             <tr>
+                <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
+             </tr>
         </table>
     </div>
     <div class="fix_item">

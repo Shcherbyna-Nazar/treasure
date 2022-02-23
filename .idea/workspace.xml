@@ -4,10 +4,14 @@
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/0001.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/templates/products/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/JS/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="254SVrxxkC2rgI7FFKVos3bGdkt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

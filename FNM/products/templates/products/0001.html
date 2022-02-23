@@ -5,42 +5,56 @@
     <div class="header"></div>
     <div class="main_products">
         <div class="menu">
-    <div class="fix">
-    <div class="profile">
-        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
-        <div class="theme">
-            <label><a href="{% url 'home' %}">Авторизация</a></label>
-        </div>
-    </div>
-    <div class="basket">
-        <img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket">
-        <p>Количество товаров в корзине:</p>
-    </div>
-    <div class="settings" onclick="settingsMore()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt="">
-        <p>Настройки  ▽</p>
-        <div class="settings_more">
-            <h3>Theme</h3>
-            <div class="theme">
-                <input type="radio" name="theme" value="dark" id="dark" onchange="change()"><label for="dark"> dark</label>
-                <input type="radio" name="theme" value="light" id="light"  onchange="change()"><label for="light">light</label>
+            <div class="fix">
+                <div class="fix_item back">
+                    <div class="fix_text"><a href="{% url 'home' %}">Назад <<</a></div>
+                </div>
+            <div class="fix_item">
+                <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
+                <div class="fix_text"><a href="">Авторизация</a></div>
             </div>
-            <h3>Lang</h3>
-            <div class="theme">
-                <input type="radio" name="lang" value="rus" id="rus" onchange="change()"><label for="rus"> rus</label>
-                <input type="radio" name="lang" value="ua" id="ua"  onchange="change()"><label for="ua">ua</label>
+            <div class="fix_item" id="basket">
+                <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
+                <div class="fix_text">Корзина ▽</div>
+            </div>
+            <div class="fix_item more">
+                <table>
+                    <tr>
+                        <td>товар</td>
+                        <td>к-во</td>
+                        <td>цена</td>
+                    </tr>
+                    {% for el in cart %}
+                    <tr>
+                        <td><a href="{% url 'tank1' el.product.id %}">{{el.product.name}}</a></td>
+                        <td>x{{el.quantity}}</td>
+                        <td>{{el.total_price}}</td>
+                    </tr>
+                    {%endfor%}
+                    <tr>
+                        <td colspan="2">Общая стоимость</td>
+                        <td>{{total}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fix_item">
+                <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
+                <div class="fix_text">Настройки  ▽</div>
             </div>
         </div>
-    </div>
-</div>
-</div>
+            <div class="up" onclick="goToUp()">&#8657;</div>
+        </div>
         <div class="field">
             <img src="{{product.product_photo.url}}" alt="" height="300" width="300">
             <form action="" method="post">
                 <button type="submit" class="button-buy"> Kupit`</button>
                 {% csrf_token %}
+
             </form>
-            <h1>{{product.name}}    {{product.price}}$<h1>
+            <h1>{{product.name}}    {{product.price}}$</h1>
             <h3>Описание:</h3>
             <p class="description">
                 {{product.description}}
