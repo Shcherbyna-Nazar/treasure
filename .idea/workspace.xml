@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1066563f-9300-4119-8e36-ac486cf22b20" name="Changes" comment="added index.html">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FNM/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FNM/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNM/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/FNM/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Newp" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">

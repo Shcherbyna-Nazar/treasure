@@ -1,3 +1,4 @@
+from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from .models import User
 from .forms import UserLoginForm, UserRegistrationForm
@@ -6,23 +7,25 @@ from django.contrib import messages
 
 # Create your views here.
 
-def register_user:
-  form = UserRegistrationForm
-  if request.method == 'POST':
-    form = UserRegistrationForm(request.POST)
-    if form.is_valid():
-      new_user = form.save(commit=False)
-      new_user.save()
-      return redirect('home')
-    else:
-      messages.error(request, 'SUCK SOME COCK U STUPID BITCH!!!')
-    
-  context = {'form': form}
-  return render(request, "login_register.html", context)
+def register_user(request):
+    form = UserRegistrationForm()
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            #   new_user = form.save(commit=False)
+            form.save()
+            return redirect('login')
 
-def login_user:
-  page = 'login'
-  if request.method == 'POST':
+        else:
+            messages.error(request, 'SUCK SOME COCK U STUPID BITCH!!!')
+
+    context = {'form': form}
+    return render(request, "users\login_register.html", context)
+
+
+def login_user(request):
+    page = 'login'
+    if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
         try:
@@ -35,6 +38,5 @@ def login_user:
             return redirect('home')
         else:
             messages.error(request, 'SUCK SOME COCK U STUPID BITCH!!!')
-  context = {'page': page}
-  return render(request, "login_register.html", context)
-
+    context = {'page': page}
+    return render(request, "users\login_register.html", context)
