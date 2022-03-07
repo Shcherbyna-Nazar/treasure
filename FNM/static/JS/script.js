@@ -1,9 +1,6 @@
 window.onresize=resize;
 window.onload=resize_label;
 checkMouseEnter=false;
-function goToUp(){
-    $(this).scrollTop(0);
-}
 function resize_label(){
     width_label=parseInt($(".profile label").css("width"))+10;
     $(".profile label").css("width", width_label +'px');
@@ -18,8 +15,6 @@ function resize(){
 $(".menu")[0].addEventListener('mouseenter', e=>{
     if($(".fix").css("position")=="fixed"){
         $(".fix").css('width', "15%");
-        $(".up").css('width', "15%");
-        $(".up").html("Naverh");
     }
     checkMouseEnter=true;
     $(".field").css('width', "85%");
@@ -34,8 +29,6 @@ $(".menu")[0].addEventListener('mouseenter', e=>{
 $(".menu")[0].addEventListener('mouseleave', e=>{
     if($(".fix").css("position")=="fixed"){
         $(".fix").css('width', "5%");
-        $(".up").css('width', "5%");
-        $(".up").html("&#8657;")
     }
     checkMouseEnter=false;
     $(".more").css("display", "none");
@@ -48,29 +41,18 @@ $(".menu")[0].addEventListener('mouseleave', e=>{
     resize();
 })
 $(document).scroll(function(){
-    widthScreen=window.innerHeight;
-    pageHeight = document.documentElement.scrollHeight;
-    stopHeight=pageHeight-widthScreen-200; //  - height footer and height div.back
     if($(this).scrollTop() > 100){
         if(checkMouseEnter==false){
             $(".fix").css('position', "fixed");
             $(".fix").css('top', "0px");
             $(".fix").css('width', "5%");
-            $(".up").css('width', "5%");
-            $(".up").css('position', "fixed");
-            $(".up").css('display', "block");
         }
     }
     else{
         $(".fix").css('position', "relative");
         $(".fix").css('top', "0px");
         $(".fix").css('width', "100%");
-        $(".up").css('width', "100%");
-        $(".up").css('display', "none");
     }
-    if($(this).scrollTop() > stopHeight){
-            $(".up").css('display', "none");
-        }
 })
 function settingsMore(){
     check=$(".settings_more").css("display");
