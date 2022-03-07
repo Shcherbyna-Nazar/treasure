@@ -5,7 +5,7 @@ body {
 .header {
   width: 100%;
   height: 100px;
-  background: #32b9a3;
+  background: #289e8a;
 }
 
 .main {
@@ -52,6 +52,7 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  cursor: auto;
 }
 .more:hover {
   background: none;
@@ -81,7 +82,6 @@ body {
 .fix_item > table {
   margin: auto;
   table-layout: fixed;
-  background: white;
   width: 90%;
   border: 1px black solid;
   border-collapse: collapse;
@@ -105,6 +105,27 @@ body {
 }
 .fix_item > table td img {
   width: 20%;
+}
+
+.goToBasket {
+  opacity: 0.8;
+  width: 75%;
+  height: 25px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+  border: 1px #89aac0 solid;
+}
+.goToBasket:hover {
+  border-top: none;
+  border-right: none;
+  opacity: 1;
+}
+.goToBasket a {
+  color: black;
 }
 
 .menu {
@@ -136,7 +157,7 @@ body {
 .footer {
   width: 100%;
   height: 200px;
-  background: #32b9a3;
+  background: #289e8a;
 }
 
 .card {
@@ -211,18 +232,6 @@ a {
   background-color: rgba(255, 255, 255, 0.459);
 }
 
-.up {
-  display: none;
-  width: 5%;
-  height: 50px;
-  text-align: center;
-  font-size: 28pt;
-  bottom: 0px;
-}
-.up:hover {
-  background: white;
-}
-
 .field table {
   margin: auto;
   margin-top: 20px;
@@ -266,6 +275,9 @@ a {
 .table_zone {
   width: 100%;
 }
+.table_zone td {
+  position: relative;
+}
 
 .navigation_cart {
   margin-left: 65%;
@@ -281,4 +293,8 @@ a {
 
 .del {
   float: right;
+  font-size: 16px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
