@@ -110,7 +110,7 @@ body {
 .goToBasket {
   opacity: 0.8;
   width: 75%;
-  height: 25px;
+  height: max-content;
   border-radius: 5px;
   margin: auto;
   margin-top: 10px;
@@ -130,7 +130,9 @@ body {
 
 .menu {
   width: 5%;
-  height: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   float: left;
   background: #89aac0;
 }
@@ -297,4 +299,8 @@ a {
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+
+.register {
+  width: 100%;
 }
