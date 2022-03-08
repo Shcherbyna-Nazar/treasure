@@ -36,16 +36,13 @@
                             <td colspan="2">Общая стоимость</td>
                             <td>{{total}}</td>
                         </tr>
-                        <tr>
-                            <td colspan="3"><a href="{% url 'cart' %}"> Перейти в корзину</a></td>
-                        </tr>
                     </table>
+                    <div class="goToBasket"><a href="{% url 'cart' %}"> Перейти в корзину</a></div>
                 </div>
                 <div class="fix_item">
                     <div class="fix_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/640px-Windows_Settings_app_icon.png" alt=""></div>
                     <div class="fix_text">Настройки </div>
                 </div>
-                <div class="up" onclick="goToUp()">&#8657;</div>
             </div>
         </div>
         <div class="field">
