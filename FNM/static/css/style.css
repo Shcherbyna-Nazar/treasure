@@ -110,7 +110,9 @@ body {
 .goToBasket {
   opacity: 0.8;
   width: 75%;
-  height: 25px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   border-radius: 5px;
   margin: auto;
   margin-top: 10px;
@@ -130,7 +132,9 @@ body {
 
 .menu {
   width: 5%;
-  height: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   float: left;
   background: #89aac0;
 }
@@ -195,20 +199,20 @@ a {
   margin: 30px;
 }
 
-.main_products .field {
+.products .field {
   background: #e0e0e0;
   display: block;
   padding: 20px;
 }
-.main_products .field img {
+.products .field img {
   float: left;
   margin-right: 20px;
 }
-.main_products .field h1 {
+.products .field h1 {
   font-size: 32pt;
   color: black;
 }
-.main_products .field .button {
+.products .field .button {
   background-color: green;
   width: 150px;
   font-size: 25pt;
@@ -217,19 +221,15 @@ a {
 }
 
 .back {
-  font-size: 20px;
-  padding-top: 10px;
-}
-.back .fix_text {
-  display: block;
-}
-
-.back a {
+  text-align: center;
   text-decoration: none;
   color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
 }
-.back a div:hover {
-  background-color: rgba(255, 255, 255, 0.459);
+.back .back_text {
+  display: block;
 }
 
 .field table {
@@ -297,4 +297,8 @@ a {
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+
+.register {
+  width: 100%;
 }
