@@ -302,3 +302,6 @@ a {
 .register {
   width: 100%;
 }
+.products form{
+  float: right;
+}

@@ -2,7 +2,7 @@
 {% block title %}Product {{product.id}}{% endblock %}
 {% block content %}
     <div class="header"></div>
-    <div class="main_products">
+    <div class="main products">
         <div class="menu">
             <div class="fix">
                 <a href="{% url 'home' %}">
@@ -48,7 +48,7 @@
         <div class="field">
             <img src="{{product.product_photo.url}}" width="300" height="300" alt="">
             <form action="" method="post">
-                {{form}}
+                {{form.as_p}}
                 <button type="submit" class="button-buy"> Kupit`</button>
                 {% csrf_token %}
             </form>

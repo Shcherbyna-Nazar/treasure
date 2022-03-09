@@ -15,7 +15,10 @@
                 {% for el in cart %}
                 <tr>
                     <td>
-                        <button class="del">Удалить с корзины</button>
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="del" name="_del_element" value="{{el.product.id}}">Удалить с корзины</button>
+                        </form>
                         <img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile">
                         {{el.product.name}} <br>
                         <span class="price_one"> Цена за 1 единицу:{{el.price}}  </span>
@@ -31,8 +34,11 @@
             </table>
         </div>
         <div class="navigation_cart">
-            <button class="confirm">Оформить заказ</button>
-            <button class="clear">Очистить корзину</button>
+            <form method="post">
+                {% csrf_token %}
+                <button class="confirm">Оформить заказ</button>
+                <button class="clear" name="_clean_cart">Очистить корзину</button>
+            </form>
         </div>
     </div>
 
