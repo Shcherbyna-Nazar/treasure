@@ -2,22 +2,20 @@ window.onresize=resize;
 window.onload=resize;
 checkMouseEnter=false;
 height_ex=Infinity;
+$("a .back").text('<<');
 function resize(){
-    $(".field").css("height", "min-content")
-    height_main=$(".field").css("height");
+    $(".field").css("height", "min-content");
+    if(!$(".menu")){
+        height_main=parseFloat($(".field").css("height"))>parseFloat($(".fix").css("height")) ? $ : $(".fix").css("height");
+    }
+    else{
+        height_main=$(".field").css("height")
+    }
     $(".main").css("height", height_main);
     $(".main_products").css("height", height_main);
     $(".menu").css("height", height_main);
     $(".field").css("height", height_main);
 }
-function resize_menu(){
-    height_main=$(".fix").css("height");
-    $(".main").css("height", height_main);
-    $(".main_products").css("height", height_main);
-    $(".menu").css("height", height_main);
-    $(".field").css("height", height_main);
-}
-console.log($(".menu")[0]);
 if(!($(".menu")[0])) {}
 else{
     $(".menu")[0].addEventListener('mouseenter', e=>{
@@ -29,9 +27,7 @@ else{
         $(".menu").css('width', "15%");
         $(".fix_text").css("display", "block");
         $(".fix_img").css("width", "15%");
-        $(".back a").text('<< Назад');
-        $(".back .fix_text").css("display", "block");
-        $(".back").css("text-align", "center");
+        $("a .back").text('<< Назад');
         resize();
     })
     $(".menu")[0].addEventListener('mouseleave', e=>{
@@ -44,8 +40,7 @@ else{
         $(".menu").css('width', "5%");
         $(".fix_text").not($(".back_text")).css("display", "none");
         $(".fix_img").css("width", "50%");
-        $(".back a").text('<<');
-        $(".back").css("text-align", "left");
+        $("a .back").text('<<');
         $(".navigation_cart").css("margin-top", "20px");
         resize();
     })
@@ -64,11 +59,6 @@ $(document).scroll(function(){
         $(".fix").css('width', "100%");
     }
 })
-function settingsMore(){
-    check=$(".settings_more").css("display");
-    pos=check=='block' ? 'none' : 'block';
-    $(".settings_more").css("display", pos);
-}
 $(".move").click(function(){
     $(this).next().toggle();
     if($(this).next().css("display")=="none"){
@@ -77,6 +67,17 @@ $(".move").click(function(){
     }
     else{
         $(".navigation_cart").css("margin-top", "-40px")
-        resize_menu();
+        resize();
     }
+})
+$(".checkpass").click(function(){
+    if($(".pass input").attr("type")=="text"){
+        $(".pass input").attr("type", "password");
+        $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/6107/premium/6107590.png?token=exp=1646903348~hmac=7c76e0ccb473ab03ac0daff33d7ca472");
+    }
+    else{
+        $(".pass input").attr("type", "text");
+        $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/2455/premium/2455761.png?token=exp=1646905483~hmac=6f4b3b61a09d640af08cb2c08b79b2a0");
+    }
+    
 })

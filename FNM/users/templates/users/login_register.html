@@ -11,7 +11,11 @@
                 <form method="post" action="" class="sign_up">
                 {% csrf_token %}
                 <input type="text" name="username" placeholder="Введите имя" class="enter">
-                <input type="password" name="password" placeholder="Введите пароль" class="enter">
+                <div class="pass">
+                    <input type="password" name="password" placeholder="Введите пароль" class="enter">
+                    <div class="checkpass"><img src="https://cdn-icons.flaticon.com/png/512/6107/premium/6107590.png?token=exp=1646903348~hmac=7c76e0ccb473ab03ac0daff33d7ca472" alt="">
+                    </div>
+                </div>
                 <input type="submit" value="Войти">
                 </form>
                 <div class="goToRegister">
