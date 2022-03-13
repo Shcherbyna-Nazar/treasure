@@ -1,29 +1,45 @@
+
 {% extends 'base.html' %}
 
 {% block title %}Authentication{% endblock %}
 {% block content %}
 
-{% if page == 'login' %}
-<form method="post" action="">
-{% csrf_token %}
-  <input type="text" name="username" placeholder="Enter Your Username">
-  <input type="password" name="password" placeholder="Enter Your Password">
-  <input type="submit" value="Submit">
-</form>
- <p>Have not signed up yet?</p>
- <a href="{% url 'register' %}">Sign Up</a>
+<div class="header"></div>
+    <div class="main">  
+        <div class="field register">
+            <div class="sign_up">
+                 {% if page == 'login' %}
+                <form method="post" action="" class="sign_up">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Введите имя" class="enter">
+                <div class="pass">
+                    <input type="password" name="password" placeholder="Введите пароль" class="enter">
+                    <div class="checkpass"><img src="https://cdn-icons.flaticon.com/png/512/6107/premium/6107590.png?token=exp=1646903348~hmac=7c76e0ccb473ab03ac0daff33d7ca472" alt="">
+                    </div>
+                </div>
+                <input type="submit" value="Войти">
+                </form>
+                <div class="goToRegister">
+                     Нет аккаунта? <br>
+                    <a href="{% url 'register' %}">Зарегистрироваться</a>
+                </div>
+                {% else %}
 
-{% else %}
+                <h1>Register an account</h1>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="register">
+                </form>
+                    <p>Already have an account?</p>
+                    <a href="{% url 'login' %}">Login</a>
 
-<h1>Register an account</h1>
-<form method="post" action="">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="register">
-</form>
-    <p>Already have an account?</p>
-    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
 
-{% endif %}
 
 {% endblock %}
+>>>>>>> yehor
