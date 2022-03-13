@@ -5,11 +5,11 @@ height_ex=Infinity;
 $("a .back").text('<<');
 function resize(){
     $(".field").css("height", "min-content");
-    if(!$(".menu")){
-        height_main=parseFloat($(".field").css("height"))>parseFloat($(".fix").css("height")) ? $ : $(".fix").css("height");
+    if(!$(".menu")[0]){
+        height_main=$(".field").css("height")
     }
     else{
-        height_main=$(".field").css("height")
+        height_main=parseFloat($(".field").css("height"))>parseFloat($(".fix").css("height")) ? $(".field").css("height")  : $(".fix").css("height");
     }
     $(".main").css("height", height_main);
     $(".main_products").css("height", height_main);
@@ -80,4 +80,22 @@ $(".checkpass").click(function(){
         $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/2455/premium/2455761.png?token=exp=1646905483~hmac=6f4b3b61a09d640af08cb2c08b79b2a0");
     }
     
+})
+$(document).on("click", ".value", function (){
+    console.log($(".value"))
+    prev=$(this).parent().html();
+    console.log($(this).parent().find(".value-main").text());
+    $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br> <input type="'+$(this).attr('data-edit-type')
+    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input"><input type="button" name="save" value="Сохранить" class="edit-button">'
+    +'<input type="button" name="cancel" value="Отмена" class="edit-button">');
+    $(".edit-input").focus();
+    
+})
+$(document).on("click", ".edit-button", function(){
+        $(this).parent().html(prev);
+        console.log($(".value"))
+})
+
+$(".value").hover(function(){
+    $(this).children('.edit').toggle();
 })
