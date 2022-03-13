@@ -41,3 +41,7 @@ def login_user(request):
             messages.error(request, 'SUCK SOME COCK U STUPID BITCH!!!')
     context = {'page': page}
     return render(request, "users\login_register.html", context)
+
+
+def profile(request):
+    return render(request, 'profile.html')
