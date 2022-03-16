@@ -7,13 +7,16 @@
 
 <div class="header"></div>  
 <div class="main">
-    <div class="field">
-    {% for product in products %}
-    <a href="{% url 'tank1' product.id %}"><div class="card">
-        <div class="card-movie"><img src="{{product.product_photo.url}}" alt="Мега ебейший танк" height="300" width="600"></div>
-        <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
-    </div></a>
-    {% endfor %}
+    <div class="field" id="field">
+        {% for product in products %}
+        <a href="{% url 'tank1' product.id %}"><div class="card">
+            <div class="card-movie"><img src="{{product.product_photo.url}}" alt="Мега ебейший танк" height="300" width="600"></div>
+            <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
+        </div></a>
+        {% endfor %}
+        <button type="submit" class="btn btn-outline-success" id="get-more-button"
+        cur_url="{% url 'home' %}">Ещё товары</button>
+
     </div>
 <div class="menu">
     <div class="fix">

@@ -69,8 +69,7 @@ $(".move").click(function(){
     else{
         $(".navigation_cart").css("margin-top", "-40px")
         resize();
-<<<<<<< HEAD
-=======
+
     }
 })
 $(".checkpass").click(function(){
@@ -81,7 +80,6 @@ $(".checkpass").click(function(){
     else{
         $(".pass input").attr("type", "text");
         $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/2455/premium/2455761.png?token=exp=1646905483~hmac=6f4b3b61a09d640af08cb2c08b79b2a0");
->>>>>>> yehor
     }
     
 })
@@ -102,4 +100,25 @@ $(document).on("click", ".edit-button", function(){
 
 $(".value").hover(function(){
     $(this).children('.edit').toggle();
+})
+
+$(document).ready(function(){
+
+    $("#get-more-button").click(function(){
+        var url = $("get-more-button").data("cur_url");
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            success:function(response){
+
+                response.forEach(element => {
+
+        });
+
+            }
+
+        })
+    })
+
 })
