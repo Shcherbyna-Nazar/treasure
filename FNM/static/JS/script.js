@@ -113,23 +113,13 @@ $(document).ready(function(){
             type: 'GET',
             success:function(response){
                 response_json=JSON.parse(response.new_product);
-                console.log($(".card").length);
-                i=1
-                n=i+2;
-                for(i=1; i<n; i++){
-                    for(j=0; j<4; j++){
-                        if(response_json[j].pk==i){
-                            element=response_json[j]
-                            break;
-                        }
-                    }
-                        $('.wrapper').append($('<a href="products/'+element.pk+'"><div class="card">'+
+                response_json.forEach(element => {
+                    $('.wrapper').append($('<a href="products/'+element.pk+'"><div class="card">'+
                     '<div class="card-movie"><img src="'+element.fields.product_photo+'" alt="'+element.fields.name+'" height="300" width="600"></div>'+'<div class="card-text">'+element.fields.name+'<div class="price">'+element.fields.price+'</div></div>'+
                     '</div></a>'));
-                };
+                });
                 resize(); 
-                }
-
+            }
         })
     })
 
