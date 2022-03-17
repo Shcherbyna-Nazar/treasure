@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 body {
   margin: 0;
@@ -504,6 +503,7 @@ form.sign_up .enter {
 .edit-button {
   margin-left: 5px;
   pointer-events: all;
+<<<<<<< HEAD
 =======
 
 @charset "UTF-8";
@@ -658,6 +658,11 @@ body {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+=======
+}
+
+.wrapper {
+>>>>>>> 4b43196a259aea0dd9eb6883b7d1833b65cbfe94
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,6 +670,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
   padding-bottom: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1012,4 +1018,7 @@ form.sign_up .enter {
   margin-left: 5px;
   pointer-events: all;
 
+=======
+  width: 100%;
+>>>>>>> 4b43196a259aea0dd9eb6883b7d1833b65cbfe94
 }
