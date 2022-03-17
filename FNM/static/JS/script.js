@@ -112,8 +112,15 @@ $(document).ready(function(){
             url: url,
             type: 'GET',
             success:function(response){
-
-
+                console.log(response);
+                response_json=JSON.parse(response.new_product)
+                response_json.forEach(element => {
+                    console.log(element.fields)
+                    $('#field').append($('<a href="products/'+element.pk+'"><div class="card">'+
+                    '<div class="card-movie"><img src="'+element.fields.product_photo+'" alt="'+element.fields.name+'" height="300" width="600"></div>'+'<div class="card-text">'+element.fields.name+'<div class="price">'+element.fields.price+'</div></div>'+
+                '</div></a>'));
+                });
+                resize();
             }
 
         })
