@@ -10,8 +10,6 @@ from .models import Product
 from django.contrib.auth.models import User
 
 
-
-
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
@@ -28,8 +26,10 @@ def home(request):
         session[settings.CUR_PAGE_ID] = cur_page
         session.modified = True
         mx = settings.MAX_PRODUCTS_ON_PAGE
-
-        products = Product.objects.all()
+        amount_of_products = len(Product.objects.all())
+        products = []
+        if (cur_page - 1) * mx < amount_of_products:
+            products = Product.objects.all()[(cur_page - 1) * mx: min(amount_of_products, cur_page * mx)]
         for item in products:
             item.product_photo = item.product_photo.url
         data = serializers.serialize('json', products, fields=("name", "price", "description", "product_photo"))
@@ -37,13 +37,12 @@ def home(request):
     else:
         session = request.session
         cur_page = session.get(settings.CUR_PAGE_ID)
-
         if cur_page:
             del session[settings.CUR_PAGE_ID]
             session.modified = True
         cart = Cart(request)
         total = cart.get_total_price()
 
-        products = Product.objects.all()
+        products = Product.objects.all()[0:settings.MAX_PRODUCTS_ON_PAGE]
         context = {'products': products, 'cart': cart, 'total': total}
         return render(request, 'main/index.html', context)
