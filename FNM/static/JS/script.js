@@ -5,6 +5,7 @@ height_ex=Infinity;
 $("a .back").text('<<');
 function resize(){
     $(".field").css("height", "min-content");
+
     if(!$(".menu")[0]){
         height_main=$(".field").css("height")
     }
@@ -68,6 +69,7 @@ $(".move").click(function(){
     else{
         $(".navigation_cart").css("margin-top", "-40px")
         resize();
+
     }
 })
 $(".checkpass").click(function(){
@@ -78,6 +80,7 @@ $(".checkpass").click(function(){
     else{
         $(".pass input").attr("type", "text");
         $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/2455/premium/2455761.png?token=exp=1646905483~hmac=6f4b3b61a09d640af08cb2c08b79b2a0");
+
     }
     
 })
@@ -98,4 +101,29 @@ $(document).on("click", ".edit-button", function(){
 
 $(".value").hover(function(){
     $(this).children('.edit').toggle();
+})
+
+$(document).ready(function(){
+
+    $("#get-more-button").click(function(){
+        var url = $("get-more-button").data("cur_url");
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            success:function(response){
+                console.log(response);
+                response_json=JSON.parse(response.new_product)
+                response_json.forEach(element => {
+                    console.log(element.fields)
+                    $('#field').append($('<a href="products/'+element.pk+'"><div class="card">'+
+                    '<div class="card-movie"><img src="'+ element.fields.product_photo +'" alt="'+element.fields.name+'" height="300" width="600"></div>'+'<div class="card-text">'+element.fields.name+'<div class="price">'+element.fields.price+'</div></div>'+
+                '</div></a>'));
+                });
+                resize();
+            }
+
+        })
+    })
+
 })
