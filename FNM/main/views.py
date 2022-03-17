@@ -9,6 +9,8 @@ from products.cart import Cart
 from .models import Product
 from django.contrib.auth.models import User
 
+from .page import Page
+
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
@@ -17,14 +19,10 @@ def is_ajax(request):
 # Create your views here.
 def home(request):
     if is_ajax(request):
-        session = request.session
-        cur_page = session.get(settings.CUR_PAGE_ID)
-        if not cur_page:
-            cur_page = session[settings.CUR_PAGE_ID] = 1
-        cur_page += 1
+        page = Page(request)
+        page.change_page()
+        cur_page = page.cur_page
         print(cur_page)
-        session[settings.CUR_PAGE_ID] = cur_page
-        session.modified = True
         mx = settings.MAX_PRODUCTS_ON_PAGE
         amount_of_products = len(Product.objects.all())
         products = []
@@ -35,11 +33,8 @@ def home(request):
         data = serializers.serialize('json', products, fields=("name", "price", "description", "product_photo"))
         return JsonResponse({'new_product': data}, status=200)
     else:
-        session = request.session
-        cur_page = session.get(settings.CUR_PAGE_ID)
-        if cur_page:
-            del session[settings.CUR_PAGE_ID]
-            session.modified = True
+        page = Page(request)
+        page.refresh()
         cart = Cart(request)
         total = cart.get_total_price()
 
