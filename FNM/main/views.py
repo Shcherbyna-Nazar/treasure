@@ -28,6 +28,7 @@ def home(request):
         return response
     else:
         cart = Cart(request)
+        print(request.user.is_authenticated)
         total = cart.get_total_price()
         products = Product.objects.all()[0:settings.MAX_PRODUCTS_ON_PAGE]
         context = {'products': products, 'cart': cart, 'total': total}
