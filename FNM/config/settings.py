@@ -145,6 +145,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
 MAX_PRODUCTS_ON_PAGE = 3
-CUR_PAGE_ID = 'cur_page'
 
 
