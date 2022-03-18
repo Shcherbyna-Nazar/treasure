@@ -40,5 +40,5 @@ def cart_show(request):
             cart.clear()
             return redirect('home')
     if not cart.session.get(settings.CART_SESSION_ID):
-        return redirect('/')
+        return redirect('home')
     return render(request, 'products/cart.html', {'cart': cart, 'total': total})

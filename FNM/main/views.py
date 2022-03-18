@@ -35,12 +35,11 @@ def home(request):
     else:
 
         page = Page(request)
-        print(page.cur_page)
-        page.cur_page=1
-        page.save()
+        page.refresh()
         cart = Cart(request)
         total = cart.get_total_price()
 
         products = Product.objects.all()[0:settings.MAX_PRODUCTS_ON_PAGE]
         context = {'products': products, 'cart': cart, 'total': total}
+        print(page.session.items())
         return render(request, 'main/index.html', context)
