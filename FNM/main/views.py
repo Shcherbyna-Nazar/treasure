@@ -17,13 +17,32 @@ def is_ajax(request):
 # Create your views here.
 def home(request):
     if is_ajax(request):
-        products = Product.objects.all()
+        session = request.session
+        cur_page = session.get(settings.CUR_PAGE_ID)
+        if not cur_page:
+            cur_page = session[settings.CUR_PAGE_ID] = 1
+        cur_page += 1
+        print(cur_page)
+        session[settings.CUR_PAGE_ID] = cur_page
+        session.modified = True
+        mx = settings.MAX_PRODUCTS_ON_PAGE
+        amount_of_products = len(Product.objects.all())
+        products = []
+        if (cur_page - 1) * mx < amount_of_products:
+            products = Product.objects.all()[(cur_page - 1) * mx: min(amount_of_products, cur_page * mx)]
+        for item in products:
+            item.product_photo = item.product_photo.url
         data = serializers.serialize('json', products, fields=("name", "price", "description", "product_photo"))
         return JsonResponse({'new_product': data}, status=200)
     else:
+        session = request.session
+        cur_page = session.get(settings.CUR_PAGE_ID)
+        if cur_page:
+            del session[settings.CUR_PAGE_ID]
+            session.modified = True
         cart = Cart(request)
         total = cart.get_total_price()
 
-        products = Product.objects.all()
+        products = Product.objects.all()[0:settings.MAX_PRODUCTS_ON_PAGE]
         context = {'products': products, 'cart': cart, 'total': total}
         return render(request, 'main/index.html', context)
