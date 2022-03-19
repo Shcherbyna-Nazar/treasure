@@ -8,21 +8,29 @@
 <div class="header"></div>  
 <div class="main">
     <div class="field" id="field">
-        {% for product in products %}
-        <a href="{% url 'tank1' product.id %}"><div class="card">
-            <div class="card-movie"><img src="{{product.product_photo.url}}" alt="Мега ебейший танк" height="300" width="600"></div>
-            <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
-        </div></a>
-        {% endfor %}
+        <div class="wrapper">
+            {% for product in products %}
+            <a href="{% url 'tank1' product.id %}"><div class="card">
+                <div class="card-movie"><img src="{{product.product_photo.url}}" alt="Мега ебейший танк" height="300" width="600"></div>
+                <div class="card-text">{{product.name}}<div class="price">{{product.price}}</div></div>
+            </div></a>
+            {% endfor %}
+        </div>  
         <button type="submit" class="btn btn-outline-success" id="get-more-button"
         cur_url="{% url 'home' %}">Ещё товары</button>
-
     </div>
 <div class="menu">
     <div class="fix">
         <div class="fix_item">
             <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
-            <div class="fix_text"><a href="{% url 'login' %}">Авторизация</a></div>
+            <div class="fix_text">
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'profile' %}">{{user.username}}</a>
+                    <a href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Авторизация</a>
+                {% endif %}
+            </div>
         </div>
         <div class="fix_item move">
             <div class="fix_img"><img src="http://simpleicon.com/wp-content/uploads/basket.png" alt="basket"></div>
