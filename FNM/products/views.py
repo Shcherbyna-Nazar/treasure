@@ -16,7 +16,6 @@ def tank1(request, id):
             quantity = form.cleaned_data.get("quantity")
 
             cart.add(product=product, quantity=quantity)
-            cart.session.set_expiry(300)
         return redirect('tank1', id)
     else:
         form = QuantityForm(initial={'quantity': 1})

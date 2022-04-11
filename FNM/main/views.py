@@ -5,6 +5,7 @@ from django.shortcuts import render
 from products.cart import Cart
 
 from .models import Product
+from .page import Page
 
 
 def is_ajax(request):
