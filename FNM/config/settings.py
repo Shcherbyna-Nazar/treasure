@@ -144,7 +144,6 @@ MEDIA_ROOT = BASE_DIR / "static/images"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
-MAX_PRODUCTS_ON_PAGE = 2
-CUR_PAGE_ID = 'cur_page'
+MAX_PRODUCTS_ON_PAGE = 3
 
 

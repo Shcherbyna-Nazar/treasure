@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.core import serializers
+from django.forms import model_to_dict
 from main.models import Product
 
 
@@ -39,7 +41,6 @@ class Cart:
 
         for product in products:
             self.cart[str(product.id)]['product'] = product
-
         for item in self.cart.values():
             item['total_price'] = Decimal(item['price']) * Decimal(item['quantity'])
             yield item
@@ -53,4 +54,3 @@ class Cart:
     def clear(self):
         del self.session[settings.CART_SESSION_ID]
         self.session.modified = True
-

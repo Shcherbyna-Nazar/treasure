@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from .models import User
 from .forms import UserLoginForm, UserRegistrationForm
@@ -6,6 +6,12 @@ from django.contrib import messages
 
 
 # Create your views here.
+
+def u_logout(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return redirect('home')
+
 
 def register_user(request):
     form = UserRegistrationForm()
@@ -44,4 +50,5 @@ def login_user(request):
 
 
 def profile(request):
-    return render(request, 'profile.html')
+    user = User.objects.get(username=request.user)
+    return render(request, 'profile.html', {'user': user,})
