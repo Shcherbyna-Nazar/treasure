@@ -47,9 +47,6 @@ body {
   background: white;
   opacity: 0.9;
 }
-.fix_item a {
-  text-decoration: none;
-}
 
 .more {
   display: none;
@@ -81,8 +78,14 @@ body {
   width: 60%;
   display: none;
   font-size: 22px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap; 
+  left: 5px;
 }
-
+.fix_text::-webkit-scrollbar{
+  display: none;
+}
 .fix_item > table {
   margin: auto;
   table-layout: fixed;
@@ -193,6 +196,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .button-buy {

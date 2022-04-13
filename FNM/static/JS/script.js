@@ -124,3 +124,25 @@ $(document).ready(function(){
     })
 
 })
+
+
+function scrollText(){
+
+    element=$(".fix_text")[0];
+    scrollTextInt=setInterval(e=>{
+        element.scrollLeft++;
+        if(element.scrollLeft==element.scrollWidth-element.clientWidth){
+            element.scrollLeft=0;
+            clearInterval(scrollTextInt);
+        }
+    }, 50)
+    
+}
+
+$(".fix_text")[0].addEventListener("mouseenter", function(){
+    scrollTextDelay=setTimeout(scrollText, 1000)
+})
+$(".fix_text")[0].addEventListener("mouseleave", function(){
+   this.scrollLeft=0;
+   clearInterval(scrollTextInt);
+})
