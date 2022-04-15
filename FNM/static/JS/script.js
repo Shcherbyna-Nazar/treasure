@@ -85,7 +85,6 @@ $(".checkpass").click(function(){
     
 })
 $(document).on("click", ".value", function (){
-    console.log($(".value"))
     prev=$(this).parent().html();
     console.log($(this).parent().find(".value-main").text());
     $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br> <input type="'+$(this).attr('data-edit-type')
@@ -96,7 +95,6 @@ $(document).on("click", ".value", function (){
 })
 $(document).on("click", ".edit-button", function(){
         $(this).parent().html(prev);
-        console.log($(".value"))
 })
 
 $(".value").hover(function(){
