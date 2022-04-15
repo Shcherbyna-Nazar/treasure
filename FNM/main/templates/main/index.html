@@ -28,11 +28,11 @@
                 {% else %}
                     <a href="{% url 'login' %}">
                 {% endif %}
-        <div class="fix_item">
+        <div class="fix_item profile-name">
             <div class="fix_img"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt="profile"></div>
             <div class="fix_text">
                 {% if request.user.is_authenticated %}
-                    {{user.username}}
+                {{user.username}}
                 {% else %}
                     Авторизация
                 {% endif %}
