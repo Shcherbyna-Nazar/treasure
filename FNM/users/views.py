@@ -1,7 +1,7 @@
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from .models import User
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, UserEditForm
 from django.contrib import messages
 
 
@@ -50,5 +50,8 @@ def login_user(request):
 
 
 def profile(request):
+    if request.method == "POST":
+        pass
     user = User.objects.get(username=request.user)
-    return render(request, 'profile.html', {'user': user,})
+    user_form = UserEditForm(request.user)
+    return render(request, 'profile.html', {'user': user, 'user_form': user_form, })

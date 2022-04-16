@@ -88,8 +88,8 @@ $(document).on("click", ".value", function (){
     console.log($(".value"))
     prev=$(this).parent().html();
     console.log($(this).parent().find(".value-main").text());
-    $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br> <input type="'+$(this).attr('data-edit-type')
-    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input"><input type="button" name="save" value="Сохранить" class="edit-button">'
+    $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br> {{user_form.as_p}} <br> <input type="'+$(this).attr('data-edit-type')
+    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input"><form method = "post"> <button type="submit" name="save" value="Сохранить" class="edit-button">Сохранить</button></form> '
     +'<input type="button" name="cancel" value="Отмена" class="edit-button">');
     $(".edit-input").focus();
     
