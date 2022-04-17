@@ -93,13 +93,10 @@ $(document).on("click", ".value", function (){
     $(".edit-input").focus();
 })
 $(document).on("click", ".edit-button", function(){
-        $(this).parent().html(prev);
-})
-
-$(document).on("click", "button.edit-button", function(){
+    let name=$(".edit-input").val();
+    $(this).parent().html(prev);
     let url=$(".profile-more-item").first().attr("cur_url");
     console.log(url);
-
     $.ajax({
         url:url,
         type: "POST",
