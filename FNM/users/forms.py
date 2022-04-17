@@ -24,3 +24,9 @@ class UserLoginForm(ModelForm):
     class Meta:
         model = User
         fields = ['username', 'password']
+
+
+class UserEditForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'country', 'email']

@@ -75,26 +75,43 @@ $(".move").click(function(){
 $(".checkpass").click(function(){
     if($(".pass input").attr("type")=="text"){
         $(".pass input").attr("type", "password");
-        $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/6107/premium/6107590.png?token=exp=1646903348~hmac=7c76e0ccb473ab03ac0daff33d7ca472");
+        $(".checkpass img").attr("src", "https://cdn-icons-png.flaticon.com/128/158/158746.png");
     }
     else{
         $(".pass input").attr("type", "text");
-        $(".checkpass img").attr("src", "https://cdn-icons.flaticon.com/png/512/2455/premium/2455761.png?token=exp=1646905483~hmac=6f4b3b61a09d640af08cb2c08b79b2a0");
+        $(".checkpass img").attr("src", "https://cdn-icons-png.flaticon.com/128/633/633655.png");
 
     }
     
 })
 $(document).on("click", ".value", function (){
     prev=$(this).parent().html();
-    console.log($(this).parent().find(".value-main").text());   
-    $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br> <input type="'+$(this).attr('data-edit-type')
-    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input"><input type="button" name="save" value="Сохранить" class="edit-button">'
-    +'<input type="button" name="cancel" value="Отмена" class="edit-button">');
+    console.log($(this).parent().find(".value-main").text());
+
+    $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br><form method="POST"> <input type="'+$(this).attr('data-edit-type')
+    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input" id="'+$(this).attr('name')+'"><button type="submit" name="save" class="edit-button">Сохранить</button>'
+    +'<input type="button" name="cancel" value="Отмена" class="edit-button"></form>');
+
     $(".edit-input").focus();
-    
 })
 $(document).on("click", ".edit-button", function(){
-        $(this).parent().html(prev);
+    $(this).parent().html(prev);
+    let value=$(".edit-input").val();
+    let name=$(".edit-input").attr('name');
+    $(this).parent().html(prev);
+
+    let url=$(".profile-more-item").first().attr("cur_url");
+    console.log(url);
+    $.ajax({
+        url:url,
+        type: "POST",
+        data:{
+        value,
+        name
+        },
+        success:console.log("ok")
+
+    })
 })
 
 $(".value").hover(function(){
@@ -121,4 +138,26 @@ $(document).ready(function(){
         })
     })
 
+})
+
+
+function scrollText(){
+    element=$(".profile-name .fix_text")[0];
+    scrollTextInt=setInterval(e=>{
+        element.scrollLeft++;
+        if(element.scrollLeft==element.scrollWidth-element.clientWidth){
+            setTimeout(e=>{element.scrollLeft=0;}, 500);
+            
+            clearInterval(scrollTextInt);
+        }
+    }, 50)
+    
+}
+
+$(".profile-name .fix_text")[0].addEventListener("mouseenter", function(){
+    scrollTextDelay=setTimeout(scrollText, 200)
+})
+$(".profile-name .fix_text")[0].addEventListener("mouseleave", function(){
+   this.scrollLeft=0;
+   clearInterval(scrollTextInt);
 })

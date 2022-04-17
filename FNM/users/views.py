@@ -1,11 +1,30 @@
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import User
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, UserEditForm
 from django.contrib import messages
 
 
 # Create your views here.
+
+def transpose_name_of_field(name):
+    if name == 'First Name':
+        return 'first_name'
+    if name == 'Last Name':
+        return 'last_name'
+    if name == 'Country':
+        return 'country'
+    if name == 'Email':
+        return 'email'
+    if name == 'Phone':
+        return 'phone'
+
+
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
 
 def u_logout(request):
     if request.user.is_authenticated:
@@ -49,6 +68,17 @@ def login_user(request):
     return render(request, "users\login_register.html", context)
 
 
+@csrf_exempt
 def profile(request):
     user = User.objects.get(username=request.user)
-    return render(request, 'profile.html', {'user': user,})
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        value = request.POST.get('value')
+
+        transpose_name = transpose_name_of_field(name)
+        if hasattr(user, transpose_name):
+            setattr(user, transpose_name, value)
+            user.save()
+        return redirect('profile')
+
+    return render(request, 'profile.html', {'user': user, })
