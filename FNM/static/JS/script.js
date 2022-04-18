@@ -95,7 +95,7 @@ $(document).on("click", ".value", function (){
     $(".edit-input").focus();
 })
 $(document).on("click", ".edit-button", function(){
-    $(this).parent().html(prev);
+    $(this).parent().parent().html(prev);
     let value=$(".edit-input").val();
     let name=$(".edit-input").attr('name');
     $(this).parent().html(prev);

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="59.543476mm"
+   height="59.543476mm"
+   viewBox="0 0 59.543476 59.543476"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="big_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.0431611"
+     inkscape:cx="-57.996797"
+     inkscape:cy="94.424537"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="217.60782"
+       y="486.02274"
+       width="17.255245"
+       height="63.269234"
+       id="rect17412" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient864">
+      <stop
+         style="stop-color:#9304e7;stop-opacity:1"
+         offset="0"
+         id="stop860" />
+      <stop
+         style="stop-color:#feb703;stop-opacity:1"
+         offset="1"
+         id="stop862" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient864"
+       id="linearGradient866"
+       x1="91.467392"
+       y1="115.5"
+       x2="31.923912"
+       y2="175.04347"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.0145445,1.5218168)" />
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-30.909367,-117.02182)">
+    <rect
+       style="fill:url(#linearGradient866);fill-opacity:1;fill-rule:evenodd;stroke-width:1.265;stroke-linecap:square;stroke-dashoffset:5.25165"
+       id="rect858"
+       width="59.543476"
+       height="59.543476"
+       x="30.909367"
+       y="117.02182"
+       ry="6.9749937"
+       inkscape:export-filename="E:\Egor\IGShop\website\FNM\static\images\logo\big-logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.9572px;line-height:1.25;font-family:Elephant;-inkscape-font-specification:Elephant;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.327623"
+       x="44.78738"
+       y="146.01825"
+       id="text6528"
+       inkscape:export-filename="E:\Egor\IGShop\website\FNM\static\images\logo\big-logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         id="tspan6526"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.9572px;font-family:'Imprint MT Shadow';-inkscape-font-specification:'Imprint MT Shadow';fill:#ffffff;fill-opacity:1;stroke-width:0.327623"
+         x="44.78738"
+         y="146.01825"
+         sodipodi:role="line"
+         rotate="0 0 0">IG</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text17410"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Elephant;-inkscape-font-specification:Elephant;white-space:pre;shape-inside:url(#rect17412);fill:#000000;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\Egor\IGShop\website\FNM\static\images\logo\big-logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.2898px;line-height:1.25;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.482245"
+       x="39.691902"
+       y="163.32312"
+       id="text41038"
+       inkscape:export-filename="E:\Egor\IGShop\website\FNM\static\images\logo\big-logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan41036"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Imprint MT Shadow';-inkscape-font-specification:'Imprint MT Shadow';fill:#ffffff;fill-opacity:1;stroke-width:0.482245"
+         x="39.691902"
+         y="163.32312">Shop</tspan></text>
+  </g>
+</svg>
