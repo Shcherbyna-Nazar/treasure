@@ -50,5 +50,6 @@ def login_user(request):
 
 
 def profile(request):
+    print(request.__dict__)
     user = User.objects.get(username=request.user)
     return render(request, 'profile.html', {'user': user,})

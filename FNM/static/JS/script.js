@@ -86,7 +86,7 @@ $(".checkpass").click(function(){
 })
 $(document).on("click", ".value", function (){
     prev=$(this).parent().html();
-    console.log($(this).parent().find(".value-main").text());
+
     $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br><form method="POST"> <input type="'+$(this).attr('data-edit-type')
     +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input"><button type="submit" name="save" class="edit-button">Сохранить</button>'
     +'<input type="button" name="cancel" value="Отмена" class="edit-button"></form>');
@@ -96,7 +96,6 @@ $(document).on("click", ".edit-button", function(){
     let name=$(".edit-input").val();
     $(this).parent().html(prev);
     let url=$(".profile-more-item").first().attr("cur_url");
-    console.log(url);
     $.ajax({
         url:url,
         type: "POST",
