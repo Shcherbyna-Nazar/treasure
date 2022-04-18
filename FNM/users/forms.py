@@ -11,7 +11,11 @@ class UserRegistrationForm(ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'ig_username', ]
+        fields = ['username', 'email', 'country', 'phone']
+        labels = {
+            'country': "Страна",
+            'phone': "Телефон"
+        }
 
     def clean_password2(self):
         cd = self.cleaned_data

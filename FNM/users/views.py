@@ -70,6 +70,7 @@ def login_user(request):
 
 @csrf_exempt
 def profile(request):
+    print(request.__dict__)
     user = User.objects.get(username=request.user)
     if request.method == 'POST':
         name = request.POST.get('name')
