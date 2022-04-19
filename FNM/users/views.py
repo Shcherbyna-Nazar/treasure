@@ -20,7 +20,7 @@ def transpose_name_of_field(name):
         return 'email'
     if name == 'Phone':
         return 'phone'
-
+    return ''
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
@@ -70,12 +70,12 @@ def login_user(request):
 
 @csrf_exempt
 def profile(request):
-    print(request.__dict__)
+    #print(request.__dict__)
     user = User.objects.get(username=request.user)
     if request.method == 'POST':
         name = request.POST.get('name')
         value = request.POST.get('value')
-
+        print(value, name)
         transpose_name = transpose_name_of_field(name)
         if hasattr(user, transpose_name):
             setattr(user, transpose_name, value)

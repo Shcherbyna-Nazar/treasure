@@ -5,8 +5,14 @@ body {
 
 .header {
   width: 100%;
-  height: 100px;
+  height:150px;
   background: #289e8a;
+  display: grid;
+  grid-template-columns:1fr 5fr;
+  grid-template-rows: 50px 1fr ;
+  grid-template-areas: 
+  "logo info" 
+  "logo find";
 }
 
 .main {
@@ -519,6 +525,51 @@ form.sign_up .enter {
       flex-wrap: wrap;
   width: 100%;
 }
-.profile-name .fix_text{
-  
+.logo{
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logoPic" "logoText";
+}
+.logo img{
+  width: 100px;
+}
+.header .find{
+  grid-area: find;
+  width: 70%;
+  height: 20px;
+  margin: auto;
+}
+.find input{
+  width: 80%;
+  height: 100%;
+}
+.find button{
+  margin: 0px;font-weight: bold;
+}
+.info{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  grid-area: info;
+}
+.info-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  background: #000;
+  color: white;
+  border-radius: 0 0 20% 20%;
+  cursor: pointer;
+}
+.info-item:hover{
+  height: 60px;
+
 }
