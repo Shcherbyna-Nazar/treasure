@@ -5,7 +5,6 @@
 
 {% block content %}
 
-<div class="header"></div>
 <div class="main">  
     <div class="field profile">
         <div class="profile-item">
@@ -30,11 +29,11 @@
                 </div>  
                 <div class="profile-more-item">
                     <span class="termin">Email</span> <br>
-                    <span class="value"data-edit-type="email"><span class="value-main">{{ user.email}}</span><span class="edit">Изменить</span></span>
+                    <span class="value"data-edit-type="email" id="email"><span class="value-main">{{ user.email}}</span><span class="edit">Изменить</span></span>
                 </div>
                 <div class="profile-more-item">
                     <span class="termin">Phone</span> <br>
-                    <span class="value"data-edit-type="number"><span class="value-main">{{user.phone}}</span><span class="edit">Изменить</span></span>
+                    <span class="value"data-edit-type="number" id="phone"><span class="value-main">{{user.phone}}</span><span class="edit">Изменить</span></span>
                 </div>
             </div>
         </div>
