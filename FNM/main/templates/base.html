@@ -9,7 +9,24 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-
+    <div class="header">
+        <div class="logo">
+            <div class="logo-img"><img src="FNM\static\images\logo\big-logo.png" alt="Log"></div>
+            <!-- <div class="logo-text">IGSHOP</div> -->
+        </div>
+        <div class="find">
+            <input type="text" name="find" placeholder="find product, seller or something" id="find">
+            <button>Поиск &#128269;</button>
+        </div>
+        <div class="info">
+            <div class="info-item">About</div>
+            <div class="info-item">Contact</div>
+            <div class="info-item">Help</div>
+            <div class="info-item">Something</div>
+            <div class="info-item">Something</div>
+        </div>
+         <a href="{% url 'logout' %}">Выйти</a> 
+    </div>  
 {% block content %}
 {% endblock %}
 <div class="menu">

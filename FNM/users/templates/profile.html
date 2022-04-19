@@ -18,16 +18,15 @@
             <div class="profile-more">
                 <div class="profile-more-item" cur_url="{% url 'profile' %}">
                     <span class="termin">First Name</span> <br>
-                    <span class="value" data-edit-type="text"><span class="value-main" id="first_name">{{user.first_name}}</span> <span class="edit">Изменить</span></span>
+                    <span class="value" data-edit-type="text" id="first_name"><span class="value-main">{{user.first_name}}</span> <span class="edit">Изменить</span></span>
                 </div>
                 <div class="profile-more-item">
-
                     <span class="termin">Last Name</span> <br>
-                    <span class="value"data-edit-type="text"><span class="value-main" id="last_name">{{user.last_name}}</span><span class="edit">Изменить</span></span>
+                    <span class="value"data-edit-type="text" id="last_name"><span class="value-main">{{user.last_name}}</span><span class="edit">Изменить</span></span>
                 </div>
                 <div class="profile-more-item">
                     <span class="termin">Country</span> <br>
-                    <span class="value"data-edit-type="select"><span class="value-main" id="country">{{user.country}}</span><span class="edit">Изменить</span></span>
+                    <span class="value"data-edit-type="select" id="country"><span class="value-main" >{{user.country}}</span><span class="edit">Изменить</span></span>
                 </div>  
                 <div class="profile-more-item">
                     <span class="termin">Email</span> <br>

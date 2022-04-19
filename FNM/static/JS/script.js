@@ -86,20 +86,22 @@ $(".checkpass").click(function(){
 })
 $(document).on("click", ".value", function (){
     prev=$(this).parent().html();
+    console.log($(this).parent().find(".value-main").text());
+    let id=$(this).parent().children()[2].id;
 
     $(this).parent().html('<span class="termin">'+$(this).parent().children(".termin").text()+'</span> <br><form method="POST"> <input type="'+$(this).attr('data-edit-type')
-    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input" id="'+$(this).attr('name')+'"><button type="submit" name="save" class="edit-button">Сохранить</button>'
+    +'" name="'+$(this).parent().children(".termin").text()+'" placeholder="Введите имя" value="'+$(this).parent().find(".value-main").text()+'" class="edit-input" id="'+id+'"><button type="submit" name="save" class="edit-button">Сохранить</button>'
     +'<input type="button" name="cancel" value="Отмена" class="edit-button"></form>');
 
     $(".edit-input").focus();
 })
 $(document).on("click", ".edit-button", function(){
-    $(this).parent().parent().html(prev);
     let value=$(".edit-input").val();
     let name=$(".edit-input").attr('name');
-    $(this).parent().html(prev);
-
+    let id="#"+$(".edit-input")[0].id;
+    $(this).parent().parent().html(prev);
     let url=$(".profile-more-item").first().attr("cur_url");
+    console.log(url);
     $.ajax({
         url:url,
         type: "POST",
@@ -107,8 +109,7 @@ $(document).on("click", ".edit-button", function(){
         value,
         name
         },
-        success:console.log("ok")
-
+        success: $(id).find(".value-main").text(value)
     })
 })
 
